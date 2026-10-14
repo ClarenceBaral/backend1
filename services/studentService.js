@@ -10,3 +10,8 @@ export const createStudent = async (student) => {
     return studentId;
 
 }
+
+export const updateStudent = async (student) => {
+    const updatedStudent = await studentModel.update(student)
+    return updatedStudent;
+}
