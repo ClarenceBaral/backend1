@@ -22,3 +22,10 @@ export const update = async (student) => {
     );
     return result.affectedRows;
 }
+
+export const remove = async (id) => {
+    const [result] = await pool.query(
+        "DELETE FROM student WHERE id= ?",[id]
+    );
+    return result.affectedRows;
+}
